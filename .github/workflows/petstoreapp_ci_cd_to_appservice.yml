@@ -48,8 +48,8 @@ jobs:
       name: Build Docker image
       with:
         login-server: ${{ env.AZURE_CONTAINER_REGISTRY }}
-        username: ${{ env.AZURE_CONTAINER_REGISTRY_USERNAME }}
-        password: ${{ secrets.PETSTORECRSECRET }}
+        username: ${{ env.Gabsyazurepetstorecr }}
+        password: ${{ secrets.BzCwhfa74hleZcYaQ1bWcZCmpsOEZqeVKH2awz6mZy+ACRBY4ROz }}
     - name: Push Docker image to Azure Container Registry    
       run: |
         docker build petstore/petstoreapp -t ${{env.AZURE_CONTAINER_REGISTRY}}/petstoreapp:latest -t ${{ env.AZURE_CONTAINER_REGISTRY }}/petstoreapp:${{ github.sha }}
